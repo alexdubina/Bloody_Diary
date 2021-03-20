@@ -1,0 +1,67 @@
+<resources>
+    <string name="app_name">Bloody_Diary</string>
+    <string name="settings_item">Settings</string>
+    <string name="new_item">New</string>
+    <string name="edit_item">Edit</string>
+    <string name="delete_item">Delete</string>
+    <string name="list_item">List</string>
+    <string name="save_item">Save</string>
+    <string name="add_or_edit">Add or Edit</string>
+    <string name="measurement_date">Measurement Date</string>
+    <string name="date">Date</string>
+    <string name="breakfast_glucose_data">Breakfast Glucose Data</string>
+    <string name="before">Before</string>
+    <string name="after">After</string>
+    <string name="lunch_glucose_data">Lunch Glucose Data</string>
+    <string name="dinner_glucose_data">Dinner Glucose Data</string>
+    <string name="_12_01_2021">12.01.2021</string>
+    <string name="_10_3">10,3</string>
+    <string name="breakfast">Breakfast</string>
+    <string name="lunch">Lunch</string>
+    <string name="dinner">Dinner</string>
+    <string name="avg">AVG</string>
+    <string name="today">Today</string>
+    <string name="measuring_data_for_16_feb_2021">Measuring data for 16, Feb 2021</string>
+    <string name="previous_8_7">Previous 8,7</string>
+    <string name="after_2_hours_late">After | 2 hours late</string>
+    <string name="per_day">per Day</string>
+    <string name="per_week">per Week</string>
+    <string name="per_month">per Month</string>
+    <string name="analysis">Analysis</string>
+    <string name="period">Period</string>
+    <string name="average">Average</string>
+    <string name="gh">GH</string>
+    <string name="delta">Delta</string>
+    <string name="_16_feb_2021">16, Feb 2021</string>
+    <string name="previous">Previous</string>
+    <string name="next">Next</string>
+    <string name="last">Last</string>
+    <string name="first">First</string>
+    <string name="gh_value">GH Value</string>
+    <string name="about">About</string>
+    <string name="set">Set</string>
+    <string name="send">Send</string>
+    <string name="donate">Donate</string>
+    <string name="donate_text">Donate Bloody Diary project</string>
+    <string name="send_text">Send diary to CSV file</string>
+    <string name="load_text">Load diary data</string>
+    <string name="load">Load</string>
+    <string name="clear_text">Clear diary data</string>
+    <string name="clear">Clear</string>
+    <string name="about_text">More information about Bloody Diary</string>
+    <string name="set_text">Set current Glycated hemoglobin</string>
+    <string name="date_text">Date of test</string>
+    <string name="date_choosing">Date choosing</string>
+    <string name="about_story">This application is intended for diabetics. This is a simple blood
+        glucose self-monitoring diary.\n\nWith the diary, you can easily record your glucose measurements
+        up to six times a day - before and after breakfast, lunch and dinner. \n\nThe main screen shows
+        the current measurements compared to the previous day. Using the navigation buttons, you can
+        easily scroll through the readings day after day.\n\nIn the Analysis table, you can see the
+        average values for the day, week and month, as well as their comparison with the indicator
+        of glycated hemoglobin and the maximum reference blood glucose value.\n\nA complete list
+        of your measurements can be found in the List tab.\n\nThe app comes with test data that needs
+        to be cleared in the Settings tab for your own use.\n\nIn the Settings tab, you can also
+        load data from a CSV file or send data to a doctor as a CSV file. In addition, here you can
+        enter the current data of the analysis of glycated hemoglobin.\n\nClick the Donate button
+        and support the authors of the project.\n\n2021 © AD Design, Ukraine </string>
+</resources>

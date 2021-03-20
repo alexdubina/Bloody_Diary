@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D7D7D7"
+    android:orientation="vertical">
+
+    <TableRow
+        android:id="@+id/tbrTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/ttlDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:background="#FFF383"
+            android:gravity="center"
+            android:text="@string/date"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="#6666CC" />
+
+        <TextView
+            android:id="@+id/ttlBreakfast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#FFF383"
+            android:gravity="center"
+            android:text="@string/breakfast"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="#6666CC" />
+
+        <TextView
+            android:id="@+id/ttlLunch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#FFF383"
+            android:gravity="center"
+            android:text="@string/lunch"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="#6666CC" />
+
+        <TextView
+            android:id="@+id/ttlDinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#FFF383"
+            android:gravity="center"
+            android:text="@string/dinner"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="#6666CC" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#FFF383"
+            android:gravity="center"
+            android:text="@string/avg"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="#6666CC" />
+    </TableRow>
+
+    <ListView
+        android:id="@+id/listview_diary"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:background="#3F51B5"
+        android:divider="@android:drawable/divider_horizontal_dark"
+        android:dividerHeight="1dp"
+        android:footerDividersEnabled="true"
+        android:headerDividersEnabled="true" />
+
+</LinearLayout>
