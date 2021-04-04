@@ -1,6 +1,6 @@
 package com.example.bloody_diary;
 
-
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -34,13 +34,14 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         setContentView(R.layout.activity_settings);
         Log.d("myLogs", "======== SettingsActivity: Starting =========");
 
-        Button btnClearDB = (Button) findViewById(R.id.btnClearDB);
-        Button btnLoadDB  = (Button) findViewById(R.id.btnLoadDB);
-        Button btnSendDB  = (Button) findViewById(R.id.btnSendDB);
-        Button btnSetGH   = (Button) findViewById(R.id.btnSetGH);
-        Button btnAbout   = (Button) findViewById(R.id.btnAbout);
-        Button btnDonate  = (Button) findViewById(R.id.btnDonate);
-        ImageButton ibtnDateGH = (ImageButton) findViewById(R.id.ibtnnDateGH);
+        Button btnClearDB = findViewById(R.id.btnClearDB);
+        Button btnLoadDB  = findViewById(R.id.btnLoadDB);
+        Button btnSendDB  = findViewById(R.id.btnSendDB);
+        Button btnSetGH   = findViewById(R.id.btnSetGH);
+        Button btnAbout   = findViewById(R.id.btnAbout);
+        Button btnDonate  = findViewById(R.id.btnDonate);
+
+        ImageButton ibtnDateGH = findViewById(R.id.ibtnDateGH);
 
         btnClearDB.setOnClickListener(this);
         btnLoadDB .setOnClickListener(this);
@@ -50,9 +51,9 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         btnDonate .setOnClickListener(this);
         ibtnDateGH.setOnClickListener(this);
 
-        etGH = (EditText) findViewById(R.id.etGH);
+        etGH = findViewById(R.id.etGH);
 
-        tvDateGH = (TextView) findViewById(R.id.tvDateGH);
+        tvDateGH = findViewById(R.id.tvDateGH);
         SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy");
         String date = sdf.format(Calendar.getInstance().getTime());
         tvDateGH.setText(date);
@@ -103,30 +104,33 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
               break;
             case R.id.btnDonate:
                 Log.d("myLogs", "SettingsActivity: Calling DonateActivity");
-                Toast.makeText(getApplicationContext(), "Sorry! Under construction",
+                Intent intent = new Intent(this, DonateActivity.class);
+                startActivity(intent);
+                Toast.makeText(getApplicationContext(), "Thank you!",
                         Toast.LENGTH_LONG).show();
                 break;
-            case R.id.ibtnnDateGH:
-                Log.d("myLogs", "SettingsActivity: Calling DonateActivity");
+            case R.id.ibtnDateGH:
+                Log.d("myLogs", "SettingsActivity: Setting date of GH measurement");
                 mDHelper.datePicker(this, tvDateGH);
                 break;
         }
     }
-        @Override
-        public boolean onCreateOptionsMenu(Menu menu) {
-            getMenuInflater().inflate(R.menu.menu_settings_activity, menu);
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-            return super.onCreateOptionsMenu(menu);
-        }
 
-        @Override
-        public boolean onOptionsItemSelected(MenuItem item) {
-            int id = item.getItemId();
-            if (id == android.R.id.home) {
-                this.finish();
-            }
-            return super.onOptionsItemSelected(item);
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_settings_activity, menu);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == android.R.id.home) {
+            this.finish();
         }
+        return super.onOptionsItemSelected(item);
+    }
 
     public void okClicked() {
         if (dialogType == 1) {
@@ -136,6 +140,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
 
     public void cancelClicked() {
     }
+
 
 
 }

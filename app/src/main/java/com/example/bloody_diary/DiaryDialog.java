@@ -33,9 +33,13 @@ public class DiaryDialog extends AppCompatDialogFragment {
                 title = "Clearing of Data!";
                 message = "Are you sure?";
                 button1String = "Clear";
-            } else {
+            } else if (diaryDate == 2) {
                 title = "About!";
                 message = (String) getText(R.string.about_story);
+                button1String = "OK";
+            } else if (diaryDate == 3) {
+                title = "Your attention!";
+                message = (String) getText(R.string.currency_story) + "1.00 USD = 28.00 UAH";
                 button1String = "OK";
             }
         } else {
@@ -72,7 +76,7 @@ public class DiaryDialog extends AppCompatDialogFragment {
                 }
             }
         });
-        if (!(diaryDate == 2)) {
+        if (!((diaryDate == 2) | (diaryDate == 3))) {
             builder.setNegativeButton(button2String, new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int id) {
                     switch (activityName) {

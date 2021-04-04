@@ -135,7 +135,7 @@
                                     android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
                                 <ImageButton
-                                    android:id="@+id/ibtnnDateGH"
+                                    android:id="@+id/ibtnDateGH"
                                     style="@android:style/Widget.Holo.Light.ImageButton"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -229,7 +229,7 @@
 
                 <TextView
                     android:id="@+id/tvClearDB"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
                     android:text="@string/clear_text"
@@ -255,12 +255,11 @@
                 android:padding="5dp">
 
                 <TextView
-                    android:id="@+id/tvDonate"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/textView13"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
-                    android:text="@string/donate_text"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:text="Your donation will help our future development"
                     android:textSize="12sp" />
 
                 <Button
@@ -271,6 +270,8 @@
                     android:layout_weight="0"
                     android:text="@string/donate"
                     android:textSize="12sp" />
+
+
             </TableRow>
 
         </TableLayout>

@@ -1,6 +1,5 @@
 package com.example.bloody_diary;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -14,20 +13,16 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 
-import com.google.android.material.datepicker.MaterialDatePicker;
-import com.google.android.material.datepicker.MaterialPickerOnPositiveButtonClickListener;
-
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
     private final String FIRST = "first";
     private final String PREVIOUS = "previous";
     private final String NEXT = "next";
     private final String LAST = "last";
     private final String CURRENT = "current";
-    private final String UP = "↑";
-    private final String DOWN = "↓";
     private TextView tvDataLabel;
     private TextView tvBreakfastBefore;
     private TextView tvBreakfastAfter ;
@@ -61,43 +56,44 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Log.d("myLogs", "======== MainActivity: Starting =========");
+
         //Define text views
-        tvDataLabel               = (TextView) findViewById(R.id.tvDataLabel);
-        tvBreakfastBefore         = (TextView) findViewById(R.id.tvBreakfastBefore);
-        tvBreakfastAfter          = (TextView) findViewById(R.id.tvBreakfastAfter );
-        tvLunchBefore             = (TextView) findViewById(R.id.tvLunchBefore    );
-        tvLunchAfter              = (TextView) findViewById(R.id.tvLunchAfter     );
-        tvDinnerBefore            = (TextView) findViewById(R.id.tvDinnerBefore   );
-        tvDinnerAfter             = (TextView) findViewById(R.id.tvDinnerAfter    );
-        tvBreakfastPreviousBefore = (TextView) findViewById(R.id.tvBreakfastPreviousBefore);
-        tvBreakfastPreviousAfter  = (TextView) findViewById(R.id.tvBreakfastPreviousAfter);
-        tvLunchPreviousBefore     = (TextView) findViewById(R.id.tvLunchPreviousBefore );
-        tvLunchPreviousAfter      = (TextView) findViewById(R.id.tvLunchPreviousAfter  );
-        tvDinnerPreviousBefore    = (TextView) findViewById(R.id.tvDinnerPreviousBefore);
-        tvDinnerPreviousAfter     = (TextView) findViewById(R.id.tvDinnerPreviousAfter );
-        tvAnalysisAverageDay      = (TextView) findViewById(R.id.tvAnalysisAverageDay  );
-        tvAnalysisAverageMonth    = (TextView) findViewById(R.id.tvAnalysisAverageMonth);
-        tvAnalysisAverageWeek     = (TextView) findViewById(R.id.tvAnalysisAverageWeek );
-        tvAnalysisGHDay     = (TextView) findViewById(R.id.tvAnalysisGHDay);
-        tvAnalysisGHWeek     = (TextView) findViewById(R.id.tvAnalysisGHWeek);
-        tvAnalysisGHMonth     = (TextView) findViewById(R.id.tvAnalysisGHMonth);
-        tvDeltaDay                = (TextView) findViewById(R.id.tvDeltaDay  );
-        tvDeltaMonth              = (TextView) findViewById(R.id.tvDeltaMonth);
-        tvDeltaWeek               = (TextView) findViewById(R.id.tvDeltaWeek );
-        TextView tvToday = (TextView) findViewById(R.id.tvToday);
+        tvDataLabel               = findViewById(R.id.tvDataLabel);
+        tvBreakfastBefore         = findViewById(R.id.tvBreakfastBefore);
+        tvBreakfastAfter          = findViewById(R.id.tvBreakfastAfter );
+        tvLunchBefore             = findViewById(R.id.tvLunchBefore    );
+        tvLunchAfter              = findViewById(R.id.tvLunchAfter     );
+        tvDinnerBefore            = findViewById(R.id.tvDinnerBefore   );
+        tvDinnerAfter             = findViewById(R.id.tvDinnerAfter    );
+        tvBreakfastPreviousBefore = findViewById(R.id.tvBreakfastPreviousBefore);
+        tvBreakfastPreviousAfter  = findViewById(R.id.tvBreakfastPreviousAfter);
+        tvLunchPreviousBefore     = findViewById(R.id.tvLunchPreviousBefore );
+        tvLunchPreviousAfter      = findViewById(R.id.tvLunchPreviousAfter  );
+        tvDinnerPreviousBefore    = findViewById(R.id.tvDinnerPreviousBefore);
+        tvDinnerPreviousAfter     = findViewById(R.id.tvDinnerPreviousAfter );
+        tvAnalysisAverageDay      = findViewById(R.id.tvAnalysisAverageDay  );
+        tvAnalysisAverageMonth    = findViewById(R.id.tvAnalysisAverageMonth);
+        tvAnalysisAverageWeek     = findViewById(R.id.tvAnalysisAverageWeek );
+        tvAnalysisGHDay           = findViewById(R.id.tvAnalysisGHDay);
+        tvAnalysisGHWeek          = findViewById(R.id.tvAnalysisGHWeek);
+        tvAnalysisGHMonth         = findViewById(R.id.tvAnalysisGHMonth);
+        tvDeltaDay                = findViewById(R.id.tvDeltaDay  );
+        tvDeltaMonth              = findViewById(R.id.tvDeltaMonth);
+        tvDeltaWeek               = findViewById(R.id.tvDeltaWeek );
+        TextView tvToday          = findViewById(R.id.tvToday);
         SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy");
         String date = sdf.format(Calendar.getInstance().getTime());
         tvToday.setText(date);
         //Define buttons
-        ImageButton ibtnNew = (ImageButton) findViewById(R.id.ibtnNew);
-        ImageButton ibtnEdit = (ImageButton) findViewById(R.id.ibtnEdit);
-        ImageButton ibtnDelete = (ImageButton) findViewById(R.id.ibtnDelete);
-        ImageButton ibtnList = (ImageButton) findViewById(R.id.ibtnList);
+        ImageButton ibtnNew =    findViewById(R.id.ibtnNew);
+        ImageButton ibtnEdit =   findViewById(R.id.ibtnEdit);
+        ImageButton ibtnDelete = findViewById(R.id.ibtnDelete);
+        ImageButton ibtnList =   findViewById(R.id.ibtnList);
 
-        ImageButton ibtnFirst = (ImageButton) findViewById(R.id.ibtnFirst);
-        ImageButton ibtnPrevious = (ImageButton) findViewById(R.id.ibtnPrevious);
-        ImageButton ibtnNext = (ImageButton) findViewById(R.id.ibtnNext);
-        ImageButton ibtnLast = (ImageButton) findViewById(R.id.ibtnLast);
+        ImageButton ibtnFirst = findViewById(R.id.ibtnFirst);
+        ImageButton ibtnPrevious = findViewById(R.id.ibtnPrevious);
+        ImageButton ibtnNext = findViewById(R.id.ibtnNext);
+        ImageButton ibtnLast = findViewById(R.id.ibtnLast);
 
         ibtnNew.setOnClickListener(this);
         ibtnEdit.setOnClickListener(this);
@@ -159,35 +155,31 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.itemList:
                 this.actionList();
                 break;
+            case R.id.itemDonate:
+                this.actionDonate();
+                break;
         }
         return super.onOptionsItemSelected(item);
     }
 
-    @SuppressLint({"SetTextI18n", "DefaultLocale"})
+
     private void setDataView(Diary cDiary, Diary pDiary) {
         Float delta, average;
-        tvDataLabel              .setText("Measuring data for "
-                + Diary.convertDateExcelToString(cDiary.getMdate()));
+        tvDataLabel.setText(String.format("Measuring data for %s", Diary.convertDateExcelToString(cDiary.getMdate())));
         // Setting info for current date
-        tvBreakfastBefore        .setText(cDiary.getBbft().toString() +
-                setUpOrDown(cDiary.getBbft(), pDiary.getBbft()));
-        tvBreakfastAfter         .setText(cDiary.getAbft().toString() +
-                setUpOrDown(cDiary.getAbft(), pDiary.getAbft()));
-        tvLunchBefore            .setText(cDiary.getBlun().toString() +
-                setUpOrDown(cDiary.getBlun(), pDiary.getBlun()));
-        tvLunchAfter             .setText(cDiary.getAlun().toString() +
-                setUpOrDown(cDiary.getAlun(), pDiary.getAlun()));
-        tvDinnerBefore           .setText(cDiary.getBdin().toString() +
-                setUpOrDown(cDiary.getBdin(), pDiary.getBdin()));
-        tvDinnerAfter            .setText(cDiary.getAdin().toString() +
-                setUpOrDown(cDiary.getAdin(), pDiary.getAdin()));
+        tvBreakfastBefore.setText(String.format("%s%s", cDiary.getBbft().toString(), setUpOrDown(cDiary.getBbft(), pDiary.getBbft())));
+        tvBreakfastAfter .setText(String.format("%s%s", cDiary.getAbft().toString(), setUpOrDown(cDiary.getAbft(), pDiary.getAbft())));
+        tvLunchBefore    .setText(String.format("%s%s", cDiary.getBlun().toString(), setUpOrDown(cDiary.getBlun(), pDiary.getBlun())));
+        tvLunchAfter     .setText(String.format("%s%s", cDiary.getAlun().toString(), setUpOrDown(cDiary.getAlun(), pDiary.getAlun())));
+        tvDinnerBefore   .setText(String.format("%s%s", cDiary.getBdin().toString(), setUpOrDown(cDiary.getBdin(), pDiary.getBdin())));
+        tvDinnerAfter    .setText(String.format("%s%s", cDiary.getAdin().toString(), setUpOrDown(cDiary.getAdin(), pDiary.getAdin())));
         // Setting info for previous date
-        tvBreakfastPreviousBefore.setText("Previous " + pDiary.getBbft().toString());
-        tvBreakfastPreviousAfter .setText("Previous " + pDiary.getAbft().toString());
-        tvLunchPreviousBefore    .setText("Previous " + pDiary.getBlun().toString());
-        tvLunchPreviousAfter     .setText("Previous " + pDiary.getAlun().toString());
-        tvDinnerPreviousBefore   .setText("Previous " + pDiary.getBdin().toString());
-        tvDinnerPreviousAfter    .setText("Previous " + pDiary.getAdin().toString());
+        tvBreakfastPreviousBefore.setText(String.format("Previous %s", pDiary.getBbft().toString()));
+        tvBreakfastPreviousAfter .setText(String.format("Previous %s", pDiary.getAbft().toString()));
+        tvLunchPreviousBefore    .setText(String.format("Previous %s", pDiary.getBlun().toString()));
+        tvLunchPreviousAfter     .setText(String.format("Previous %s", pDiary.getAlun().toString()));
+        tvDinnerPreviousBefore   .setText(String.format("Previous %s", pDiary.getBdin().toString()));
+        tvDinnerPreviousAfter    .setText(String.format("Previous %s", pDiary.getAdin().toString()));
         // Setting info for per Day analysis data
         average = cDiary.getAverage();
         delta = average - valueGH;
@@ -213,14 +205,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String trend = "";
         if (!((curGlucose == 0) || (prevGlucose == 0))) {
         if (curGlucose > prevGlucose) {
+            String UP = "↑";
             trend = " " + UP;
         } else if (curGlucose < prevGlucose) {
+            String DOWN = "↓";
             trend = " " + DOWN;
         }};
         return trend;
     };
 
-    @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
@@ -296,6 +289,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Log.d("myLogs", "MainActivity: Start of activity ListDiaryActivity");
     }
 
+    private void actionDonate() {
+        Log.d("myLogs", "MainActivity: Calling DonateActivity");
+        Intent intent = new Intent(this, DonateActivity.class);
+        startActivity(intent);
+        Toast.makeText(getApplicationContext(), "Thank you!",
+                Toast.LENGTH_LONG).show();
+    }
+
     private void invokeDiaries(String diaryType) {
         Diary curDiary = null;
         Diary prevDiary = null;
@@ -350,4 +351,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void cancelClicked() {
     }
+
 }

@@ -64,4 +64,8 @@
         load data from a CSV file or send data to a doctor as a CSV file. In addition, here you can
         enter the current data of the analysis of glycated hemoglobin.\n\nClick the Donate button
         and support the authors of the project.\n\n2021 © AD Design, Ukraine </string>
+    <string name="currency_story">Checkout will be in UAH (Ukrainian hryvnia). \n\nThe order
+        for donation will be formed with today currency rate of UAH to USD from the National bank
+        of Ukraine. \n
+    </string>
 </resources>
